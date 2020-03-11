@@ -103,9 +103,50 @@
         background-color: #f2f2f2;
         font-family: 'Open Sans', sans-serif;
     }
+    /** GLOBALES **/
+    
+    .contenedor {
+        width: 99%;
+        margin: 0 auto;
+    }
+    
+    @media only screen and (min-width:480px) {
+        .contenedor {
+            width: 95%;
+        }
+    }
+    
+    @media only screen and (min-width:768px) {
+        .contenedor {
+            width: 90%;
+        }
+    }
+    
+    @media only screen and (min-width:992px) {
+        .contenedor {
+            width: 90%;
+            max-width: 1100px;
+        }
+    }
+    
+    .seccion {
+        padding: 30px 0;
+    }
     
     h2 {
         font-family: 'Oswald', sans-serif;
+        font-size: 2.4em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    h2::after {
+        content: '';
+        margin: 0 auto;
+        background-image: url(../img/separador.png);
+        height: 30px;
+        width: 100px;
+        display: block;
     }
     /** HEADER **/
     
@@ -193,6 +234,94 @@
             margin: 0;
             line-height: 1;
         }
+    }
+    /** BARRA **/
+    
+    div.barra {
+        background-color: #353535;
+        padding: 20px 0;
+    }
+    
+    div.logo {
+        width: 80%;
+        float: left;
+    }
+    
+    div.logo img {
+        width: 100%;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        div.logo {
+            width: 33%;
+        }
+    }
+    /** NAVEGACION PRINCIPAL**/
+    
+    nav.navegacion-principal {
+        display: none;
+    }
+    
+    nav.navegacion-principal a {
+        font-family: 'Oswald', sans-serif;
+        color: #ffffff;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all .6s ease;
+    }
+    
+    nav.navegacion-principal a:last-child {
+        border: 2px solid #1db100;
+        color: #1db100;
+    }
+    
+    nav.navegacion-principal a:last-child:hover {
+        color: #ffffff;
+    }
+    
+    nav.navegacion-principal a:hover {
+        background-color: #1db100;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        nav.navegacion-principal {
+            width: 67%;
+            float: right;
+            text-align: right;
+            display: block;
+        }
+        nav.navegacion-principal a {
+            margin-right: 10px;
+            padding: 10px 10px;
+            display: inline-block;
+        }
+    }
+    /** MENU MOVIL**/
+    
+    div.menu-movil {
+        width: 60px;
+        display: block;
+        float: right;
+        text-align: right;
+        margin-top: 12px;
+    }
+    
+    div.menu-movil:hover {
+        cursor: pointer;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        div.menu-movil {
+            display: none;
+        }
+    }
+    
+    div.menu-movil span {
+        height: 8px;
+        margin-bottom: 6px;
+        background-color: white;
+        display: block;
     }
     /* ==========================================================================
    Helper classes
